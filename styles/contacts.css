@@ -25,6 +25,9 @@ body {
     font-size: 25px;
 }
 
+#cart-total {
+    color: white;
+}
 #contact-ways {
     color: white;
     font-family: 'Righteous';
