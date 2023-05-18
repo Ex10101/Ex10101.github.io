@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+#nav-links a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+  
+#nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-links a:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+#nav-wrapper {
+    height: 70px;
+    width: 100%;
+}
+#navbar {
+    z-index: 100;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #313030;
+    top: 0;
+    left: 0;
+}
+#nav-links a {
+    color: #FFFFFF;
+    margin: 0 50px;
+}
+#nav-links {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'Righteous';
+}
+#hamburger {
+    display: none;
+    position: absolute;
+    right: 30px;
+}
+#nav-logo {
+    top: 17px;
+    position: absolute;
+    left: 40px;
+}
+#nav-other {
+    color: #ffffff;
+    display: flex;
+    font-family: "Righteous";
+    font-size: 18px;
+    position: absolute;
+    right: 40px;
+}
+#login-icon {
+    cursor: pointer;
+}
+#cart-icon {
+    cursor: pointer;
+}
+#nav-other div {
+    align-items: center;
+    display: flex;
+    margin: 0 15px;
+}
+#nav-other div img {
+    margin-right: 3px;
+    width: 50px;
+    height: 50px;
+}
+#cart {
+    transition: opacity 0.3s;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 101;
+    font-family: 'K2D';
+    padding: 10px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 0 0 20px 20px;
+    background-color: #202020;
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    width: 500px;
+    height: auto;
+}
+#cart-total {
+    font-size: 19px;
+    text-align: center;
+}
+.cart-item button {
+    color: white;
+    font-family: 'K2D';
+    background-color: #202020;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+#cart-close {
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid white;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    color: white;
+    font-family: 'K2D';
+    background-color: #202020;
+    padding: 5px 10px;
+}
+#cart-pay {
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid white;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: white;
+    font-family: 'K2D';
+    background-color: #202020;
+    padding: 5px 10px;
+}
+.cart-remove {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.cart-remove:hover {
+    background-color: white;
+    color: black;
+}
+.cart-flex {
+    display: flex;
+    align-items: center;
+} 
+.cart-item p {
+    margin: 0 20px;
+}
+.cart-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.cart-item img {
+    width: 100px;
+    height: 75px;
+}
+@media (max-width: 1300px) {
+    #nav-links a {
+        margin: 0 25px;
+    }
+}
+@media (max-width: 1000px) {
+    #cart {
+        right: 50%;
+        transform: translateX(+50%);
+    }
+    #nav-links {
+        position: absolute;
+        top: 70px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 0px;
+        width: 100%;
+        background-color: #202020;
+        transition: 0.2s;
+    }
+    #nav-other {
+        padding: 20px 0;
+        opacity: 0%;
+        width: 100%;
+        background-color: #161616;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        transition: 0.2s;
+    }
+    #nav-other.active {
+        opacity: 100%;
+        top: 270px;
+    }
+    #nav-links.active {
+        height: 200px;
+    }
+    #nav-links a {
+        margin: 10px 0;
+    }
+    #hamburger {
+        display: inline;
+    }
+}
+@media (max-width: 550px) {
+    #cart {
+        width: 320px;
+    }
+    #cart-total {
+        font-size: 15px;
+    }
+    .cart-flex {
+        flex-direction: column;
+    }
+}

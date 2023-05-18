@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+h1,h2,h3 {
+    font-weight: 400;
+}
+body {
+    background-color: #141414;
+    color: #FFFFFF;
+}
+
+#filter-bar {
+    background-color: #1f1f1f;
+    font-family: 'Righteous';
+    width: 300px;
+    height: calc(100vh - 70px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.filter-type {
+    padding-left: 40px;
+    border-bottom: 1px solid #353535;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 38%;
+}
+.filter-type p {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.filter-type h3 {
+    width: 165px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #FEFF4E;
+    font-size: 25px;
+}
+.filter-select p {
+    width: fit-content;
+    position: relative;
+    display: block;
+}
+
+.filter-select p::after, .filter-select p.selected::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.filter-select p:hover::after, .filter-select p.selected::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+  
+  
+.filter-type:nth-child(3){
+    height: 24%;
+}
+
+#price-filter {
+    display: flex;
+    flex-direction: column;
+}
+#price-filter input {
+    margin: 5px 0;
+    font-family: 'Righteous';
+    color: white;
+    width: 140px;
+    background-color: #1f1f1f;
+    height: 20px;
+    border: 1px solid white;
+}
+#more-btn {
+    color: white;
+    border: 1px solid white;
+    background-color: #1f1f1f;
+    font-size: 17px;
+    padding: 27px 5;
+    width: 90px;
+    height: 30px;
+    font-family: 'Righteous';
+}
+#main-products {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+}
+.product {
+    margin: 30px;
+    background-color: #262626;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+}
+.p-name {
+    width: 324px;
+    text-align: center;
+    font-family: 'K2D';
+    font-size: 23px;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+}
+#arrow {
+    z-index: 100;
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+}
+.p-price {
+    font-family: 'K2D';
+    font-size: 25px;
+}
+.p-down {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.buy-btn {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    background-color: #262626;
+    font-size: 17px;
+    font-family: 'Righteous';
+    width: 90px;
+    height: 30px;
+    transition: 0.2s;
+}
+.buy-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+@keyframes toastFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes toastFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#toast {
+    transform: translateX(-50%);
+    font-family: 'K2D';
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: -10;
+    opacity: 0;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transition: all 0.2s;
+}
+
+#toast.show {
+    opacity: 1;
+    z-index: 105;
+}
+
+#footer {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    height: 200px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    color: white;
+}
+#footer-left {
+    margin-left: 50px;
+}
+#footer-right a {
+    margin: 0 5px;
+}
+#footer-right {
+    margin-right: 50px;
+}
+#copyright {
+    font-size: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-height: 800px) {
+    .filter-type p {
+        margin-bottom: 2px;
+        font-size: 18px;
+    }
+    .filter-type h3 {
+        font-size: 22px;
+    }
+    .filter-type {  
+        height: 35%;
+    }
+    .filter-type:nth-child(3){
+        height: 30%;
+    }
+}
+@media (max-width: 800px) {
+    #footer {
+        width: 100%;
+        height: 270px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 16px;
+        margin-left: 0;
+    }
+    #footer-left {
+        margin-left: 0px;
+    }
+    #footer-right a {
+        margin: 0 5px;
+    }
+    #footer-right {
+        margin-right: 0px;
+    }
+    #copyright {
+        min-width: 205px;
+    }
+    #arrow {
+        display: block;
+    }
+    #filter-bar {
+        opacity: 0;
+        z-index: 100;
+        width: 0%;
+        overflow: hidden;
+    }
+    #filter-bar.active {
+        opacity: 100%;
+        width: 250px;
+    }
+    #main-products {
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .product {
+        margin: 20px;
+        background-color: #262626;
+        width: 320px;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 30px;
+    }
+    .p-name {
+        width: 250px;
+        text-align: center;
+        font-family: 'K2D';
+        font-size: 18px;
+        border-bottom: 2px solid white;
+        padding-bottom: 20px;
+    }
+    .p-price {
+        font-family: 'K2D';
+        font-size: 17px;
+        text-align: center;
+    }
+    .p-down {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .buy-btn {
+        color: white;
+        border: 1px solid white;
+        background-color: #262626;
+        font-size: 13px;
+        font-family: 'Righteous';
+        width: 90px;
+        height: 30px;
+    }
+}

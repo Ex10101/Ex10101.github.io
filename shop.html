@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Jura&family=K2D&family=Righteous&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <title>G-Setup - SHOP</title>
+</head>
+<body>
+    
+    <div id="nav-wrapper">
+        <div id="navbar">
+            <a href="home.html" id="nav-logo"><img src="images/g-setup.png" alt="" ></a>
+            <nav id="nav-links">
+                <a href="shop.html">Shop</a>
+                <a href="info.html">Info</a>
+                <a href="contacts.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div id="nav-other">
+                <div>
+                    <img src="images/basket.png" alt="" id="cart-icon">
+                    <p>Cart</p>
+                </div>
+                <div>
+                    <img src="images/user.png" alt="" id="login-icon">
+                    <p>Log In</p>
+                </div>
+            </div>
+            <img src="images/hamburger.png" alt="" id="hamburger">
+            <div id="cart">
+                <div id="cart-items">
+                    
+                </div>
+                <p id="cart-total">Total: 0.00$</p>
+                <button id="cart-close">Close Cart</button>
+                <button id="cart-pay">Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+    <aside id="filter-bar">
+        <div class="filter-type">
+            <h3>Device type:</h3>
+            <div class="filter-select">
+                <p>Keyboards</p>
+                <p>Mouses</p>
+                <p>Microphones</p>
+                <p>Headphones</p>
+                <p>Mouse pads</p>
+            </div>
+        </div>
+        <div class="filter-type">
+            <h3>Manufacturer:</h3>
+            <div class="filter-select">
+                <p>Logitech</p>
+                <p>HyperX</p>
+                <p>Razer</p>
+                <p>Asus</p>
+                <p>SteelSeries</p>
+                <p>A4Tech</p>
+                <!-- <button id="more-btn">More</button> -->
+            </div>
+        </div>
+        <div class="filter-type">
+            <h3>Price:</h3>
+            <div id="price-filter">
+                <label for="min-price">Min:</label>
+                <input type="number" id="min-price">
+                <label for="max-price">Max:</label>
+                <input type="number" id="max-price">
+            </div>
+        </div>
+    </aside>
+
+    <div id="main-products">
+        <img src="images/arrow.png" alt="" id="arrow"   3>
+
+        <!-- Keyboards -->
+        <div class="product" data-type="Keyboards" data-manufacturer="Logitech" data-price="129.99">
+            <img src="images/logitech-g-pro-mechanical.png" alt="">
+            <p class="p-name">Logitech G Pro Mechanical</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">129.99$</p>
+            </div>
+        </div>
+        <div class="product" data-type="Keyboards" data-manufacturer="HyperX" data-price="107.99">
+            <img src="images/hyperx-alloy-fps-pro.png" alt="">
+            <p class="p-name">HyperX Alloy Fps Pro</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">107.99$</p>
+            </div>
+        </div>
+        <div class="product" data-type="Keyboards" data-manufacturer="SteelSeries" data-price="179.99">
+            <img src="images/steelseries-apex-pro.png" alt="">
+            <p class="p-name">SteelSeries Apex Pro</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">179.99$</p>
+            </div>
+        </div>
+
+        <!-- Mouses -->
+        <div class="product" data-type="Mouses" data-manufacturer="SteelSeries" data-price="34.99">
+            <img src="images/steelseries-rival-3.png" alt="">
+            <p class="p-name">SteelSeries Rival 3</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">34.99$</p>
+            </div>
+        </div>
+        <div class="product" data-type="Mouses" data-manufacturer="Logitech" data-price="109.99">
+            <img src="images/logitech-g-pro.png" alt="">
+            <p class="p-name">Logitech G Pro Wireless</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">109.99$</p>
+            </div>
+        </div>
+
+        <!-- Microphones -->
+        <div class="product" data-type="Microphones" data-manufacturer="HyperX" data-price="179.99">
+            <img src="images/hyperx-quadcast-s.png" alt="">
+            <p class="p-name">HyperX Quadcast S</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">179.99$</p>
+            </div>
+        </div>
+        <div class="product" data-type="Microphones" data-manufacturer="Razer" data-price="123.99">
+            <img src="images/razer-seiren-emote.png" alt="">
+            <p class="p-name">Razer Seiren Emote</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">123.99$</p>
+            </div>
+        </div>
+
+        <!-- Headphones -->
+        <div class="product" data-type="Headphones" data-manufacturer="Razer" data-price="119.99">
+            <img src="images/razer-kraken-ultimate.png" alt="">
+            <p class="p-name">Razer Seiren Emote</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">119.99$</p>
+            </div>
+        </div>
+        <div class="product" data-type="Headphones" data-manufacturer="A4Tech" data-price="29.99">
+            <img src="images/a4tech-g501.png" alt="">
+            <p class="p-name">A4Tech G501 Headphones</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">29.99$</p>
+            </div>
+        </div>
+
+        <!-- Mouse Pads -->
+        <div class="product" data-type="Mouse pads" data-manufacturer="A4Tech" data-price="7.99">
+            <img src="images/a4tech-b087s.png" alt="">
+            <p class="p-name">A4Tech B087s Mouse pad</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">7.99$</p>
+            </div>
+        </div>
+        <div class="product" data-type="Mouse pads" data-manufacturer="Asus" data-price="32.99">
+            <img src="images/asus-rog-sheath.png" alt="">
+            <p class="p-name">Asus Rog Sheath</p>
+            <div class="p-down">
+                <button class="buy-btn">To Cart</button>
+                <p class="p-price">32.99$</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="footer">
+        <div id="footer-left">
+            <img src="images/footer-logo.png" alt="">
+            <p>Adress: USA Wall Street 16, 811011</p>
+            <p>Phone: +123 444 555 66</p>
+            <p>Email: g-setup@info.com</p>
+        </div>
+        <div id="footer-right">
+        <a href=""><img src="images/insta.png" alt=""></a>
+        <a href=""><img src="images/facebook.png" alt=""></a>
+        <a href=""><img src="images/twitter.png" alt=""></a>
+        <a href=""><img src="images/linkedin.png" alt=""></a>
+        </div>
+        <p id="copyright">© G-Setup all rights reserved</p>
+    </footer>
+    
+    <div id="toast"></div>
+
+
+
+
+    <script src="scripts/navbar.js"></script>
+    <script src="scripts/filtration.js"></script>
+    <script src="scripts/cart.js"></script>
+
+</body>
+</html>

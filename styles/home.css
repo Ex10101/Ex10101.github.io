@@ -1,0 +1,240 @@
+@keyframes fadeIn {
+    from {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes fadeInS {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#main-content {
+    position: relative;
+    background-color: #141414;
+    color: #ffffff;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#left-content {
+    font-family: 'Jura', sans-serif;
+}
+#left-content h1,#left-content p {
+    font-size: 40px;
+    font-weight: 400;
+}
+#comp-name {
+    color: #FEFF4E;
+    font-family: 'Bruno Ace', cursive;
+}
+#side-decoration {
+    z-index: 1;
+    animation: fadeIn 1.5s forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#left-content h1 {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 20px;
+    width: 640px;
+}
+#left-content p {
+    opacity: 0;
+    animation: fadeInLeft 1.5s forwards;
+    padding-top: 20px;
+    margin-left: 110px;
+}
+#right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* #view-btn {
+    margin-bottom: 80px;
+    font-family: 'Righteous';
+    padding: 20px 35px;
+    font-size: 20px;
+    color: white;
+    background-color: #141414;
+    border: 1px solid white;
+} */
+
+#view-btn {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 80px;
+    font-family: 'Righteous';
+    padding: 20px 35px;
+    font-size: 20px;
+    color: white;
+    background-color: #141414;
+    border: 1px solid white;
+    transition: color 0.3s;
+    z-index: 2;
+}
+
+#view-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s;
+    z-index: -1;
+}
+
+#view-btn:hover {
+    color: #141414;
+}
+
+#view-btn:hover::before {
+    width: 100%;
+}
+
+
+
+
+#main-image {
+    z-index: 2;
+    animation: fadeInS 1.5s;
+    margin-bottom: 30px;
+    width: 600px;
+    height: auto;
+}
+#footer {
+    height: 200px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    color: white;
+}
+#footer-left {
+    margin-left: 50px;
+}
+#footer-right a {
+    margin: 0 5px;
+}
+#footer-right {
+    margin-right: 50px;
+}
+#copyright {
+    font-size: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-height: 800px) {
+    #main-content {
+        height: fit-content;
+    }
+}
+@media (max-width: 1600px) {
+    #main-image {
+        width: 450px;
+        height: auto;
+    }
+    #view-btn {
+        padding: 16px 30px;
+        font-size: 19px;
+    }
+    #main-content {
+        justify-content: space-between;
+    }
+    #left-content,
+    #right-content {
+        margin: 0 50px;
+    }
+}
+@media (max-width: 1300px) {
+    #left-content {
+        margin-top: 100px;
+    }
+    #main-content {
+        justify-content: center;
+        flex-direction: column;
+    }
+    #right-content {
+        margin: 30px 0px;
+    }
+}
+@media (max-width: 800px) {
+    #footer {
+        height: 270px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 16px;
+    }
+    #footer-left {
+        margin-left: 0px;
+    }
+    #footer-right a {
+        margin: 0 5px;
+    }
+    #footer-right {
+        margin-right: 0px;
+    }
+    #copyright {
+        min-width: 210px;
+    }
+    #left-content h1,
+    #left-content p {
+        font-size: 30px;
+    }
+    #left-content h1 {
+        border-bottom: 2px solid #FFFFFF;
+        padding-bottom: 20px;
+        width: 400px;
+        text-align: center;
+    }
+    #left-content p {
+        padding-top: 20px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 500px) {
+    #main-image {
+        width: 300px;
+    }
+    #left-content h1,
+    #left-content p {
+        font-size: 22px;
+    }
+    #left-content h1 {
+        border-bottom: 2px solid #FFFFFF;
+        padding-bottom: 20px;
+        width: 300px;
+        text-align: center;
+    }
+}
